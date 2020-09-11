@@ -20,10 +20,9 @@ from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 import pkg_resources
 import requests
 from debug_toolbar.panels import Panel
-
 from django.conf import settings
-# noinspection PyProtectedMember
 from django.http import HttpResponse, HttpRequest
+# noinspection PyProtectedMember
 from django.template import engines, TemplateSyntaxError
 from django.templatetags.static import static
 from django.utils.functional import cached_property
