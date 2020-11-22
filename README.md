@@ -3,7 +3,7 @@ djt_nvu
 
 Add a panel to [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for checking your HTML against a validator.
 
-![Screenshot](djt_nvu.png)
+![Screenshot](https://github.com/d9pouces/djt_nvu/raw/master/djt_nvu.png)
 
 Just install `djt-nvu`...
 ```bash
