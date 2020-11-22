@@ -22,6 +22,7 @@ import requests
 from debug_toolbar.panels import Panel
 from django.conf import settings
 from django.http import HttpResponse, HttpRequest
+
 # noinspection PyProtectedMember
 from django.template import engines, TemplateSyntaxError
 from django.templatetags.static import static
@@ -64,7 +65,11 @@ and https://github.com/validator/validator/wiki/Output-»-JSON
 
     def generate_stats(self, request: HttpRequest, response: HttpResponse):
         content_type = response.get("Content-Type")
-        if content_type and content_type.startswith("text/html") and (response.status_code < 300 or response.status_code >= 400):
+        if (
+            content_type
+            and content_type.startswith("text/html")
+            and (response.status_code < 300 or response.status_code >= 400)
+        ):
             content_text = response.content
             nu_messages = self.validate(content_text, content_type=content_type)
             for m in nu_messages["messages"]:

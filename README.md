@@ -5,7 +5,11 @@ Add a panel to [django-debug-toolbar](https://github.com/jazzband/django-debug-t
 
 ![Screenshot](djt_nvu.png)
 
-Just add "djt_nvu.panel.W3ValidatorPanel" to your settings `DEBUG_TOOLBAR_PANELS`.
+Just install `djt-nvu`...
+```bash
+python3 -m pip install djt-nvu
+```
+... and add "djt_nvu.panel.W3ValidatorPanel" to your settings `DEBUG_TOOLBAR_PANELS`.
 By default, `djt_nvu` checks against "https://html5.validator.nu/" but you can change it by adding a setting `DJT_NVU_URL`. 
 
 ```python
